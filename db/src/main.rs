@@ -23,10 +23,7 @@ async fn main() -> io::Result<()> {
         .await
         .unwrap();
     
-    let course_rows = sqlx::query!(
-        r#"select id, teacher_id, name, time from course where id = $1"#,
-        1
-    )
+    let course_rows = sqlx::query!(r#"select id, teacher_id, name, time from course where id = $1"#, 1)
     .fetch_all(&db_pool)
     .await
     .unwrap();
