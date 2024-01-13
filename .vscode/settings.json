@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\ws\\webservice\\Cargo.toml"
+    ]
+}
